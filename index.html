@@ -10,13 +10,14 @@
 </head>
 <body style="margin: 0; overflow: hidden;">
     <!-- A-Frame Scene with AR.js -->
-    <a-scene embedded arjs>
-        <a-camera position="0 1.6 0" fov="100" look-controls="enabled: true"></a-camera>
+    <a-scene embedded arjs="sourceType: webcam;" scale="0.5 0.5 0.5">
+        <a-camera position="0 1.6 0" fov="100" look-controls="enabled: true" near="0.1" far="1000"></a-camera>
 
         <a-entity id="fireworks" visible="false">
             <a-sphere position="0 5 -3" radius="1" color="yellow" opacity="0.5"animation="property: scale; to: 5 5 5; dur: 1500; easing: easeOutQuad; loop: false"></a-sphere>
             <a-text value="Happy Diwali by Google and VE Entertainment!" position="0 6 -3" scale="3 3 3" color="#FFCC00" visible="false"></a-text>
         </a-entity>
+    
     </a-scene>
 </body>
 </html>
