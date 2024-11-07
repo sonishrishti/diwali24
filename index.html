@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Diwali Rocket AR</title>
     <!-- Load A-Frame and AR.js for WebAR -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
@@ -10,7 +10,7 @@
 </head>
 <body style="margin: 0; overflow: hidden;">
     <!-- A-Frame Scene with AR.js -->
-    <a-scene embedded arjs="sourceType: webcam;" scale="0.5 0.5 0.5">
+    <a-scene embedded arjs="sourceType: webcam; trackingMethod: best;scale: 0.5;">
         <a-camera position="0 1.6 0" fov="100" look-controls="enabled: true" near="0.1" far="1000"></a-camera>
 
         <a-entity id="fireworks" visible="false">
